@@ -1,0 +1,22 @@
+generated: '2026-09-28'
+method: searched
+source: https://www.binkey.com/privacy-policy.html
+signals:
+  data_retention:
+    evidence:
+      - source: privacy-policy
+        http_status: 200
+        fetched: /tmp/binkey_privacy.html
+        url: https://www.binkey.com/privacy-policy.html
+        quote: "Except as otherwise permitted or required by applicable law or regulation, we may retain your information, or a portion thereof, for as long as you use the Services and for a reasonable time thereafter."
+        section: "5. Data Retention Policy, Managing Your Information"
+        note: Retains user data while service is used and reasonable time after.
+  data_residency:
+    evidence:
+      - source: privacy-policy
+        http_status: 200
+        fetched: /tmp/binkey_privacy.html
+        url: https://www.binkey.com/privacy-policy.html
+        quote: "The Services are intended to be used in the United States. If you use our Services outside of the United States, you consent to having your data transferred to the United States."
+        section: "5. Data Retention Policy, Managing Your Information"
+        note: Data may be transferred to US for non-US users.

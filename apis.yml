@@ -1,23 +1,82 @@
 aid: binkey
+
 name: Binkey
-description: 'Binkey is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: Binkey enables loyalty programs to seamlessly add FSA and HSA claims filing to the customer experience, allowing merchants to accept
+  pre‑tax health benefit payments directly at checkout. Founded in 2022, the fintech provides an API‑enabled payment platform that automates eligibility
+  verification and claim processing, improving the intersection of healthcare financing and e‑commerce.
+
 url: https://raw.githubusercontent.com/api-evangelist/binkey/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
-- Company
-apis: []
+- Fintech
+- Payments
+- Healthcare
+- API
+- Loyalty
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Conformance
+  url: conformance/binkey-conformance.yml
+- type: SecurityTxt
+  url: well-known/binkey-status-security.txt
+- type: WellKnown
+  url: well-known/binkey-well-known.yml
+- type: Hosts
+  url: hosts/binkey-hosts.yml
+- type: Vendors
+  url: vendors/binkey-vendors.yml
+- type: TermsOfService
+  url: https://www.binkey.com/terms-of-service.html
+- type: StatusPage
+  url: https://status.binkey.com/
+- type: PrivacyPolicy
+  url: https://www.binkey.com/privacy-policy.html
+- type: DomainSecurity
+  url: security/binkey-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.binkey.com
+- type: Documentation
+  url: https://www.binkey.com/api-documentation.html
+- type: Blog
+  url: https://www.binkey.com/blog/
+
+apis:
+- name: Binkey API
+  description: API documentation for Binkey's payment platform, enabling FSA/HSA claim filing at checkout.
+  humanURL: https://www.binkey.com/api-documentation.html
+  aid: binkey:binkey-api
+
+x-coverage:
+  state: gated
+  reason: partner-login
+  detail: Docs endpoint redirects to a login page requiring partner credentials.
+  evidence:
+  - url: https://docs.binkey.com/openapi.json
+    status: 302
+  checked: '2026-09-28'
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 8
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
