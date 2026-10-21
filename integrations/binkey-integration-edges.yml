@@ -1,0 +1,24 @@
+generated: '2026-10-20'
+method: searched
+checked:
+- bigcommerce/integrations/bigcommerce-integration-edges.yml
+source:
+- bigcommerce/integrations/bigcommerce-integration-edges.yml
+edges:
+- partner_name: BigCommerce (own)
+  partner: bigcommerce
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://www.bigcommerce.com/apps/binkey-pay/
+  mirror_of: bigcommerce/integrations/bigcommerce-integration-edges.yml
+  apps:
+  - Binkey Pay
+  listing_count: 1
+  detected: '2026-10-20'
+  detected_by: mirror-platform-listings.py
+  category: Payments & Security, Payment Processors & Gateways
